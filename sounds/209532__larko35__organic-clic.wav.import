@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/209532__larko35__organic-clic.wav-26525d216aef0254eaf4d1aaee776f9f.sample"
+
+[deps]
+
+source_file="res://sounds/209532__larko35__organic-clic.wav"
+dest_files=[ "res://.import/209532__larko35__organic-clic.wav-26525d216aef0254eaf4d1aaee776f9f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
