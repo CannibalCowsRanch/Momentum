@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://sounds/421757__pausenraum__legno-10.wav" type="AudioStream" id=1]
 [ext_resource path="res://scenes/hit_sound.gd" type="Script" id=2]
@@ -7,6 +7,12 @@
 
 custom_solver_bias = 0.0
 radius = 35.0
+
+[sub_resource type="OccluderPolygon2D" id=2]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -24.6333, -24.533, -24.8968, 25.0088, 25.172, 25.2723, 24.9084, -24.0059 )
 
 [node name="hammer" type="RigidBody2D"]
 
@@ -63,6 +69,11 @@ autoplay = false
 mix_target = 0
 bus = "Hammer"
 script = ExtResource( 2 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." index="3"]
+
+occluder = SubResource( 2 )
+light_mask = 1
 
 [connection signal="body_entered" from="." to="hit_sound" method="_on_hammer_body_entered"]
 

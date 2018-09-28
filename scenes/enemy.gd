@@ -1,7 +1,11 @@
 extends Node2D
-export var health = 10
+export var health = 30
 const MAX_VELOCITY = 3000
 const MAX_VELOCITY_SQUARED = 9000000
+
+func _ready():
+	$health_label.bbcode_text = String(int(health))
+	
 
 func _on_body_body_entered(body):
 	#var kinetic_energy = min(body.linear_velocity.length_squared(), MAX_VELOCITY_SQUARED) * body.mass / 2
